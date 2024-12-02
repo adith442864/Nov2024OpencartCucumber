@@ -101,7 +101,8 @@ public class BaseClass {
         capabilities.setCapability("LT:Options", ltOptions);
 
         try {
-            return new RemoteWebDriver(new URL("https://hub.lambdatest.com/wd/hub"), capabilities);
+            //return new RemoteWebDriver(new URL("https://hub.lambdatest.com/wd/hub"), capabilities);
+            return new RemoteWebDriver(new URL("https://192.168.29.240/wd/hub"), capabilities);
         } catch (Exception e) {
             logger.error("Error initializing LambdaTest driver: " + e.getMessage());
             return null;
